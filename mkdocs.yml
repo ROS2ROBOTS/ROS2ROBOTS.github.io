@@ -3,27 +3,41 @@ site_name: 自主移动机器人使用文档
 # site_url: https://mydomain.org/mysite
 theme:
   name: material
-
   features:
     - navigation.tabs       # 顶部标签栏
     - navigation.sections   # 左侧菜单显示“分组标题”
     - navigation.top        # 右下角“回到顶部”按钮
     - search.suggest        # 搜索联想（输入时自动提示)
     - search.highlight      # 搜索结果高亮关键词
-
   language: zh # 默认语言
-
-
   palette: 
     - scheme: default
       toggle:
         icon: material/weather-night
         name: 切换到暗色模式
-
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: 切换到亮色模式
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/489593500?spm_id_from=333.1007.0.0
+
+plugins:
+  - search
+  - callouts
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition            # 支持 Material 主题的提示框渲染
+  - pymdownx.tasklist:    # 支持 - [ ] 任务列表复选框渲染
+      clickable_checkbox: true  # 允许点击复选框（可选）
+
 
 
 nav:
@@ -60,18 +74,3 @@ nav:
       - IMU 标定: 05-device-params/05-imu-calibration.md
       - Wi-Fi 参数: 05-device-params/06-wifi-config.md
 
-
-extra:
-  generator: false  #页脚显示“MkDocs制造”
-  social:
-    - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/489593500?spm_id_from=333.1007.0.0
-
-
-
-
-markdown_extensions:
-  - toc:
-      permalink: true
-  - pymdownx.highlight
-  - pymdownx.superfences

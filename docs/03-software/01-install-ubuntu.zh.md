@@ -6,7 +6,6 @@
 > 如果您是第一次安装操作系统，无需担心：Ubuntu 提供图形化安装向导，大多数情况下直接选择默认选项即可完成安装。
 
 
-
 ---
 
 
@@ -26,7 +25,6 @@
 - 若不在列表中，可先 **[试用 Ubuntu 桌面](https://documentation.ubuntu.com/desktop/en/latest/tutorial/try-ubuntu-desktop/#try-ubuntu-desktop)** 验证硬件兼容性
 
 
-
 ---
 
 
@@ -38,7 +36,6 @@
 ### 需备份的内容
 - 个人文件 → 移动硬盘 / U 盘
 - 浏览器数据 → 登录 Firefox / Google 账号同步
-
 
 
 ---
@@ -59,7 +56,6 @@
 > [中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/ubuntu-releases/22.04.5/)
 >
 > [清华大学开源镜像站](https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/22.04.5/)
-
 
 
 ---
@@ -92,7 +88,6 @@
 5. 点击 **Flash!** 等待写入完成
 
 
-
 ---
 
 
@@ -103,7 +98,6 @@
 3. 进入 **启动菜单**（常见按键：F12 / Esc / F2 / F10）
 4. 选择 U 盘启动项
 5. 出现 Ubuntu 启动菜单后，选择 **Try or Install Ubuntu**
-
 
 
 ---
@@ -184,7 +178,6 @@
    - 再次进入 BIOS
    - 将 **Ubuntu** 或 **UEFI Hard Drive BBS Priority** 中的 Ubuntu 置顶
    - 保存并退出
-
 
 
 ---
