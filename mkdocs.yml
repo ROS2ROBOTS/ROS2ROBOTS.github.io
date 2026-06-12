@@ -55,6 +55,7 @@ nav:
     - 设备检查与启动: 01-quick-start/01-设备检查与启动.md
     - 连接到机器人: 01-quick-start/02-连接到机器人.md
     - 基本功能检测: 01-quick-start/03-基本功能检测.md
+    - 本地开发调试: 01-quick-start/04-本地开发调试.md
 
   - 机械结构与传感器:
     - 整机结构概述: 02-hardware/01-整机结构概述.md
@@ -74,12 +75,12 @@ nav:
 
   - 基础教学:
       - ROS 2:
-        - ROS 2 介绍: 04-basics/ROS2/1 - ROS2 快速了解.md
-        - ROS2 Topic: 04-basics/ROS2/1.1 - ROS2 Topic 应用.md
-        - ROS2 Service: 04-basics/ROS2/1.2 - ROS2 Service 应用.md
-        - ROS2 Action: 04-basics/ROS2/1.3 - ROS2 常用指令应用.md
-        - ROS2 Launch: 04-basics/ROS2/1.4 - RQT 可视化工具指南.md
-        - ROS2 Parameter: 04-basics/ROS2/1.5 - RVIZ2 可视化工具指南.md
+        - ROS 2 介绍: 04-basics/ROS2/00-ROS2.zh.md
+        - ROS2 Topic: 04-basics/ROS2/01-ROS2-Topic.zh.md
+        - ROS2 Service: 04-basics/ROS2/02-ROS2-Service.zh.md
+        - ROS2 Action: 04-basics/ROS2/03-ROS2-Action.zh.md
+        - ROS2 Launch: 04-basics/ROS2/04-ROS2-Launch.zh.md
+        - ROS2 Parameter: 04-basics/ROS2/05-ROS2-Parameter.zh.md
 
       - Python: 
         - Python 基础: 04-basics/Python/1-python.md
