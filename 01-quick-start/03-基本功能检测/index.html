@@ -1,0 +1,2514 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02-%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+      
+      
+        <link rel="next" href="../04-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/szbs.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>基本功能检测 - 自主移动机器人使用文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="自主移动机器人使用文档" class="md-header__button md-logo" aria-label="自主移动机器人使用文档" data-md-component="logo">
+      
+  <img src="../../images/61d7f15b093ae.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            自主移动机器人使用文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基本功能检测
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-%E8%AE%BE%E5%A4%87%E6%A3%80%E6%9F%A5%E4%B8%8E%E5%90%AF%E5%8A%A8/" class="md-tabs__link">
+          
+  
+  
+  快速上手
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-hardware/01-%E6%95%B4%E6%9C%BA%E7%BB%93%E6%9E%84%E6%A6%82%E8%BF%B0/" class="md-tabs__link">
+          
+  
+  
+  机械结构与传感器
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-software/00-preparation.zh/" class="md-tabs__link">
+          
+  
+  
+  软件与开发环境
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-basics/ROS2/00-ROS2.zh/" class="md-tabs__link">
+          
+  
+  
+  基础教学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-device-params/01-VMXPi_Titan%E5%8F%82%E6%95%B0/" class="md-tabs__link">
+          
+  
+  
+  设备硬件参数适配
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="自主移动机器人使用文档" class="md-nav__button md-logo" aria-label="自主移动机器人使用文档" data-md-component="logo">
+      
+  <img src="../../images/61d7f15b093ae.png" alt="logo">
+
+    </a>
+    自主移动机器人使用文档
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速上手
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速上手
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-%E8%AE%BE%E5%A4%87%E6%A3%80%E6%9F%A5%E4%B8%8E%E5%90%AF%E5%8A%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备检查与启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连接到机器人
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本功能检测
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本功能检测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 连接信息
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 检测步骤
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 检测步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 SSH 登录机器人
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 切换到 root 用户
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 进入工作空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 加载环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 运行底盘急停状态获取程序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 运行底盘急停状态获取程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为与操作指引
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 控制器电池电压获取
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 控制器电池电压获取">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期输出示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 面板按键与指示灯测试
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7 面板按键与指示灯测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 底盘基础直线运动
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 底盘基础直线运动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 底盘基础旋转运动
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9 底盘基础旋转运动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 完整检测流程小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 常见问题及处理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 检测结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 贡献者
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本地开发调试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    机械结构与传感器
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    机械结构与传感器
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-hardware/01-%E6%95%B4%E6%9C%BA%E7%BB%93%E6%9E%84%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整机结构概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-hardware/02-%E8%BF%90%E5%8A%A8%E5%BA%95%E7%9B%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运动底盘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-hardware/03-OMS%E6%89%A7%E8%A1%8C%E6%9C%BA%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OMS执行机构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-hardware/04-%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%96%E8%AE%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    传感器外设
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件与开发环境
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    软件与开发环境
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/00-preparation.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/01-install-ubuntu.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装 Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/02-install-ros2.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装 ROS 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/03-install-vscode.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装 VS Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/04-install-python-deps.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python 依赖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/05-install-nvidia-driver.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NVIDIA driver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/06-install-docker-nvidia.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker & NVIDIA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-software/08-install-git.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装与配置 Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础教学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础教学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ROS 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/ROS2/00-ROS2.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS 2 介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/ROS2/01-ROS2-Topic.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2 Topic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/ROS2/02-ROS2-Service.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2 Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/ROS2/03-ROS2-Action.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2 Action
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/ROS2/04-ROS2-Launch.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2 Launch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/ROS2/05-ROS2-Parameter.zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2 Parameter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-basics/Python/1-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python 基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备硬件参数适配
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    设备硬件参数适配
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-device-params/01-VMXPi_Titan%E5%8F%82%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMXPi Titan 参数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-device-params/02-%E5%BA%95%E7%9B%98%E8%BF%90%E5%8A%A8%E5%AD%A6%E5%8F%82%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    底盘运动学参数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-device-params/03-OMS%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E5%8F%82%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OMS 电机参数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-device-params/04-Lidar%E9%A9%B1%E5%8A%A8%E5%8F%82%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lidar 驱动参数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-device-params/05-IMU%E6%B0%B4%E5%B9%B3%E6%A0%87%E5%AE%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IMU 标定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-device-params/06-%E6%97%A0%E7%BA%BFWi-Fi%E5%8F%82%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wi-Fi 参数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 连接信息
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 检测步骤
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 检测步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 SSH 登录机器人
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 切换到 root 用户
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 进入工作空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 加载环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 运行底盘急停状态获取程序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 运行底盘急停状态获取程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为与操作指引
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 控制器电池电压获取
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 控制器电池电压获取">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期输出示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 面板按键与指示灯测试
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7 面板按键与指示灯测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 底盘基础直线运动
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 底盘基础直线运动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 底盘基础旋转运动
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9 底盘基础旋转运动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预期行为
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 完整检测流程小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 常见问题及处理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 检测结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 贡献者
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">基本功能检测<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>为了避免因本地环境不完善而无法进行测试，本检测方案通过 <strong>SSH</strong> 直接连接到机器人，在机器人端运行多个示例程序，依次验证底盘急停、控制器电池电压、面板按键与指示灯等功能是否正常。后续可根据本流程再配置本地开发环境。</p>
+<h2 id="2">2. 连接信息<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>SSH</strong>：<code>ssh vmx@10.12.34.2</code></li>
+<li><strong>SFTP</strong>：<code>sftp://10.12.34.2/</code></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<ol>
+<li>SSH 与 SFTP 连接时登录用户名为：<code>vmx</code>，密码为：<code>password</code>2</li>
+<li>所有操作均在机器人本体上执行，请确保机器人电源接通，网络可达。</li>
+</ol>
+</div>
+<h2 id="3">3. 检测步骤<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31-ssh">3.1 SSH 登录机器人<a class="headerlink" href="#31-ssh" title="Permanent link">&para;</a></h3>
+<p>打开终端（Linux/macOS）或 PowerShell（Windows），执行：</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>vmx@10.12.34.2
+</code></pre></div>
+<p>输入密码 <code>password</code> 后成功登录。</p>
+<h3 id="32-root">3.2 切换到 root 用户<a class="headerlink" href="#32-root" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su
+</code></pre></div>
+<blockquote>
+<p>⚠️ 提示：执行 <code>sudo su</code> 需要输入当前用户 <code>vmx</code> 的密码，同样为 <code>password</code>。</p>
+</blockquote>
+<h3 id="33">3.3 进入工作空间<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/vmx/User_WSR_HB_Robot/wsc_hbrobotv2_python/
+</code></pre></div>
+<h3 id="34">3.4 加载环境变量<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/home/vmx/User_WSR_HB_Robot/wsc_hbrobotv2_python/set_vmx_env.sh
+</code></pre></div>
+<blockquote>
+<p>📌 说明：该脚本会设置 ROS 环境变量、Python 路径等，必须执行后才能正确运行示例程序。</p>
+</blockquote>
+<h3 id="35">3.5 运行底盘急停状态获取程序<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>example/01-底盘控制范例/02-底盘急停状态获取.py
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>运行程序后，程序会通过ROS2系统读取设备返回数据，终端日志会提示我们<strong>“请拍下急停!”</strong>，我们可以按下急停按键，如果正常触发，则会反馈相应日志信息，并结束程序；</p>
+</div>
+<h4 id="_2">预期行为与操作指引<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>程序启动后，终端会输出提示信息：<strong>“请拍下急停!”</strong>。</li>
+<li>此时请手动按下机器人底盘上的<strong>急停按钮</strong>（红色大按钮）。</li>
+<li>若急停功能正常，程序将检测到状态变化，并在终端输出类似以下内容的日志：
+   <div class="highlight"><pre><span></span><code>[INFO] 急停已触发，状态：按下
+[INFO] 程序正常退出
+</code></pre></div></li>
+<li>程序自动结束。</li>
+</ol>
+<hr />
+<h3 id="36">3.6 控制器电池电压获取<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>example/01-底盘控制范例/04-电池电压获取.py
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>运行程序后，程序会通过ROS2系统读取设备返回数据，终端日志将打印主控制器电池电压信息，读取 <strong>10 次</strong>后程序自动结束。</p>
+</div>
+<h4 id="_3">预期输出示例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>[INFO] 电池电压: 12.15 V
+[INFO] 电池电压: 12.147 V
+...
+[INFO] 已读取10次，程序正常退出
+</code></pre></div>
+<hr />
+<h3 id="37">3.7 面板按键与指示灯测试<a class="headerlink" href="#37" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>example/02-IO控制范例/02-按键与指示灯控制.py
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<ol>
+<li>运行程序后，机器人上的 LED 指示灯会开始闪烁（频率约 1Hz）。</li>
+<li>约 5 秒后，终端会输出提示 <strong>“请按下按键关闭程序.”</strong>。</li>
+<li>此时请按下机器人上的<strong>启动按键</strong>（绿色或带有标识的物理按键）。</li>
+<li>按下按键后，程序检测到按键事件，LED 停止闪烁，程序正常退出。</li>
+</ol>
+</div>
+<h4 id="_4">预期行为<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>LED 周期性闪烁。</li>
+<li>按下启动按键后，终端输出类似：
+  <div class="highlight"><pre><span></span><code>[INFO] 检测到按键按下，程序退出
+</code></pre></div></li>
+<li>LED 熄灭，程序结束。</li>
+</ul>
+<hr />
+<h3 id="38">3.8 底盘基础直线运动<a class="headerlink" href="#38" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>example/06-导航范例/02-基础直行.py
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>运行程序后，程序会通过运动学闭环控制系统，驱动机器人底盘直线行走1m，到达目标后会主动结束程序。</p>
+</div>
+<h4 id="_5">预期行为<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>运行程序，建立连接</li>
+<li>机器人直线行走1m</li>
+<li>到达目标，程序结束</li>
+</ul>
+<hr />
+<h3 id="39">3.9 底盘基础旋转运动<a class="headerlink" href="#39" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>example/06-导航范例/01-基础旋转.py
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>运行程序后，程序会通过运动学闭环控制系统，驱动机器人底盘旋转180度，到达目标后会主动结束程序。</p>
+</div>
+<h4 id="_6">预期行为<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>运行程序，建立连接</li>
+<li>机器人原地旋转180度</li>
+<li>到达目标，程序结束</li>
+</ul>
+<hr />
+<h2 id="4">4. 完整检测流程小结<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>建议按顺序执行以下检测：</p>
+<ol>
+<li><strong>急停功能</strong>（3.5）→ 确认急停响应正常</li>
+<li><strong>电池电压</strong>（3.6）→ 确认电源系统通信正常</li>
+<li><strong>按键与指示灯</strong>（3.7）→ 确认人机交互硬件正常</li>
+<li><strong>基础直线运动</strong> （3.8）→ 验证运动学模型配置</li>
+<li><strong>基础旋转运动</strong> （3.9）→ 验证IMU数据源</li>
+</ol>
+<h2 id="5">5. 常见问题及处理<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>可能原因</th>
+<th>解决方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSH 连接超时</td>
+<td>IP 地址错误或网络不通</td>
+<td>确认机器人 IP 为 <code>10.12.34.2</code>，且本机与机器人在同一网段</td>
+</tr>
+<tr>
+<td><code>sudo su</code> 认证失败</td>
+<td>密码错误</td>
+<td>确认 <code>vmx</code> 用户密码为 <code>password</code></td>
+</tr>
+<tr>
+<td>环境变量加载报错</td>
+<td>文件路径不存在</td>
+<td>使用 <code>ls</code> 检查 <code>/home/vmx/User_WSR_HB_Robot/wsc_hbrobotv2_python/</code> 是否存在</td>
+</tr>
+<tr>
+<td>Python 程序报错 <code>ModuleNotFoundError</code></td>
+<td>未加载环境变量</td>
+<td>重新执行 <code>source set_vmx_env.sh</code></td>
+</tr>
+<tr>
+<td>急停程序无响应</td>
+<td>急停信号未传递或程序未正确监听</td>
+<td>检查急停按钮是否按下到位，可重启程序重试</td>
+</tr>
+<tr>
+<td>电池电压程序无输出</td>
+<td>通信异常或未加载驱动</td>
+<td>确认机器人主控已上电，重试或查看系统日志</td>
+</tr>
+<tr>
+<td>按键与指示灯程序 LED 不闪烁</td>
+<td>GPIO 权限或设备树问题</td>
+<td>确保以 root 运行（<code>sudo su</code> 后执行），检查硬件连接</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6">6. 检测结论<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>急停功能</strong>：程序按预期输出日志并退出 → 正常  </li>
+<li><strong>电池电压</strong>：连续输出 10 次电压值并退出 → 正常  </li>
+<li><strong>按键与指示灯</strong>：LED 闪烁，按下按键后程序退出 → 正常  </li>
+<li><strong>基础直线运动</strong>：正常直线运动1m → 正常 </li>
+<li><strong>基础旋转运动</strong>：正常原地旋转180度 → 正常   </li>
+</ul>
+<blockquote>
+<p>✅ 通过全部示例检测后，即可进行后续本地环境配置与更多功能测试。</p>
+</blockquote>
+<hr />
+<h2 id="_7">👥 贡献者<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/yxzhc"><img src="https://avatars.githubusercontent.com/u/80094007" width="70"></a></p>
+<p><br>
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！</p>
+<p><img alt="" src="../../images/61d7f15b093ae.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/489593500?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
